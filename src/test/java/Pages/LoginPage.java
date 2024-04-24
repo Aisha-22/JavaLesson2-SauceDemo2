@@ -28,9 +28,14 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
-
+//  Creating a Method to use across - For every Element created
+//    'void' is used because the method is not returning anything
     public void enterUsername(String username) {
+//        The reason for the 'Wait Method' is to prevent unnecessary failures
+//        The variable 'username_xpath' is reused
+//        Tests a written for the slowest nextwork connection - TimeOut: If the Element does not load in 'X' amount of seconds then stop with the test
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(username_xpath));
+//        Placeholder for the 'username'
         username_xpath.sendKeys(username);
     }
 
