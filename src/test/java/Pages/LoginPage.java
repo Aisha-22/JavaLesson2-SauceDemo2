@@ -14,21 +14,22 @@ public class LoginPage {
 
     public WebDriver driver;
 
-//    Creating Elements (Ctrl+Alt+l)
+    //    Creating Elements (Ctrl+Alt+l)
     @FindBy(xpath = "//input[@id='user-name']")
 //    Created a variable (username_xpath)
-    WebElement username_xpath;
+            WebElement username_xpath;
     @FindBy(xpath = "//input[@id='password']")
     WebElement password_xpath;
     @FindBy(xpath = "//input[@id='login-button']")
     WebElement loginButton_xpath;
 
-//    Constructor for each and every page - For Execution to happen in all other classes
+    //    Constructor for each and every page - For Execution to happen in all other classes
 //    The LoginPage Method below is created from the Class itself
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
-//  Creating a Method to use across - For every Element created
+
+    //  Creating a Method to use across - For every Element created
 //    'void' is used because the method is not returning anything
     public void enterUsername(String username) {
 //        The reason for the 'Wait Method' is to prevent unnecessary failures
@@ -40,13 +41,14 @@ public class LoginPage {
     }
 
     public void enterPassword(String password) {
+
         password_xpath.sendKeys(password);
     }
 
     public void clickLoginButton() {
+
         loginButton_xpath.click();
     }
-
 
 
 }
