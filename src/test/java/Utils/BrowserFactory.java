@@ -39,7 +39,7 @@ public class BrowserFactory {
         return driver;
     }
 
-//    Start a Browser to Execute you use the '@Test' notation
+//    Create a Browser Method Start a Browser to Execute you use the '@Test' notation
 //    @Test
 //    public void test(){
 //        startBrowser("Chrome", "https://www.saucedemo.com/");
