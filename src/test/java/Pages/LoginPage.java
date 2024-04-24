@@ -1,3 +1,4 @@
+//LogingPage Class created under Page Package
 package Pages;
 
 import org.openqa.selenium.WebDriver;
@@ -18,7 +19,6 @@ public class LoginPage {
     WebElement username_xpath;
     @FindBy(xpath = "//input[@id='password']")
     WebElement password_xpath;
-
     @FindBy(xpath = "//input[@id='login-button']")
     WebElement loginButton_xpath;
 
