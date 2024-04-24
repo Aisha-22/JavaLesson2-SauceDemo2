@@ -1,4 +1,4 @@
-// Test Case - Verify that User is logged on successfully
+// Test Case - Verify that User is logged in successfully
 package Pages;
 
 import org.openqa.selenium.WebDriver;
@@ -25,6 +25,7 @@ public class HomePage {
 
     public void verifyUserIsLoggedIn() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(product_xpath));
+//        isDisplayed returns a Boolean Value (True/False)
 //        product_xpath.isDisplayed();
         String productText = product_xpath.getText();
         Assert.assertEquals(productText,"Products");

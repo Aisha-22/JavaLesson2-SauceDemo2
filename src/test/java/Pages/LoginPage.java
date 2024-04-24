@@ -14,15 +14,17 @@ public class LoginPage {
 
     public WebDriver driver;
 
-//    Locators & Elements
+//    Creating Elements (Ctrl+Alt+l)
     @FindBy(xpath = "//input[@id='user-name']")
+//    Created a variable (username_xpath)
     WebElement username_xpath;
     @FindBy(xpath = "//input[@id='password']")
     WebElement password_xpath;
     @FindBy(xpath = "//input[@id='login-button']")
     WebElement loginButton_xpath;
 
-//    Constructor for each and every page
+//    Constructor for each and every page - For Execution to happen in all other classes
+//    The LoginPage Method below is created from the Class itself
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
